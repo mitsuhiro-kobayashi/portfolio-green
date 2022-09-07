@@ -48,7 +48,7 @@ header ul {
 }
 
 header ul li {
-    margin: 1% 1% 0 0;
+    margin: 1% 3% 0 0;
 }
 
 header ul li a::after {
@@ -86,15 +86,13 @@ header ul li a {
 .firstview-txt {
     margin: 5% 0 0 10%;
     color: #FFFFFF;
+    width: 60%;
 }
 
-.firstview-txt h1::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #6AEDC8;
-}
+.firstview-txt h1 {
+    display: inline-block;
+    border-bottom: 3px solid #6AEDC8;
+} 
 
 .firstview-txt p {
     text-align: center;
@@ -107,14 +105,17 @@ main
 
 #about {
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .about-contents {
     width: 100%;
+    
 }
 
-section img {
+.section-img {
     width: 20%;
+    margin-bottom: 50px;
 }
 
 .about-txt {
@@ -137,17 +138,130 @@ section img {
     background-color:#53BD9D;
     color: #FFFFFF;
     padding: 5%;
-}
-
-#projects h2 {
     text-align: center;
 }
 
-#projects img {
+.projects-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
     width: 100%;
 }
 
-
-.projects-cards {
-    display: flex;
+.projects-card {
+    text-align: left;
+    width: 66%;
+    padding: 5%;
 }
+
+.projects-cards img {
+    width: 100%;
+}
+
+.project-links {
+    display: flex;
+    margin-left: 2%;
+}
+.project-links p{
+    border: 0.5px #FFFFFF solid;
+    font-size: smaller;
+    margin-right: 5%;
+    padding: 5px;
+}
+
+.project-links a {
+    color: #FFFFFF;
+}
+
+#contact {
+    text-align: center;
+    padding: 5%;
+}
+
+.contact-cards {
+    display: flex;
+justify-content: space-around;
+}
+
+.contact-card img {
+    width: 50%;
+}
+
+
+.contact-card h3::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #707070;
+    transform: translate(10%);
+}
+
+footer {
+    background-color: #F5F4F4;
+    padding: 15px 0;
+}
+
+.tx-f {
+    text-align: center;
+    font-size: smaller;
+}
+
+
+@media screen and (max-width:767px) {
+    .firstview {
+        display: block;
+    }
+
+    .firstview-img {
+        width: 100%;
+    }
+    .firstview-txt {
+        margin: auto;
+    }
+
+    h1,h2 {
+        font-size: 40px;
+    }
+
+    #projects {
+        padding-bottom: 70px;
+    }
+
+    .projects-cards {
+        display: block;
+    }
+
+    .projects-card {
+        width: 90%;
+        text-align: center;
+    }
+
+    .project-links {
+        justify-content: space-evenly;
+    }
+
+    .contact-cards {
+        display: block;
+        margin: auto 10%;
+    }
+
+    .section-img {
+        width: 60%;
+    }
+
+    .contact-card {
+        background-color: #DEDADA;
+        border-top: solid 5px #53BD9D;
+        margin-bottom: 50px;
+    }
+    .contact-card img {
+        width: 10%;
+        margin-top: 30px;  
+    }
+    .contact-card h3::after {
+        width: 30%;
+        transform: translate(120%);
+    }
+
+    }
